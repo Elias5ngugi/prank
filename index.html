@@ -1,0 +1,72 @@
+<html>
+<head>
+    <title>Hello</title>
+    <style>
+        /* CSS for the body to create a dark theme */
+        body {
+            background-color: black;
+            color: white;
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            text-align: center;
+            overflow: hidden;
+        }
+
+        /* CSS for the "SYSTEM FAILURE" message */
+        h1 {
+            font-size: 50px;
+            font-weight: bold;
+            color: red;
+            text-shadow: 0 0 20px red, 0 0 30px red, 0 0 40px red;
+            animation: blink 1.5s infinite;
+        }
+
+        /* CSS for recovering files message */
+        p {
+            font-size: 20px;
+            color: white;
+            margin-top: 20px;
+        }
+
+        /* CSS for the success message */
+        .success {
+            color: green;
+            font-size: 50px;
+            font-weight: bold;
+            animation: fadeIn 2s ease-in-out;
+        }
+
+        /* Animation for blinking "SYSTEM FAILURE" message */
+        @keyframes blink {
+            0% { opacity: 1; }
+            50% { opacity: 0.2; }
+            100% { opacity: 1; }
+        }
+
+        /* Animation for fading in "Just kidding!" message */
+        @keyframes fadeIn {
+            0% { opacity: 0; }
+            100% { opacity: 1; }
+        }
+    </style>
+    <script>
+        setTimeout(() => {
+            document.body.innerHTML = "<h1>SYSTEM FAILURE DETECTED!</h1>";
+            setTimeout(() => {
+                document.body.innerHTML += "<p>Recovering files...</p>";
+                setTimeout(() => {
+                    document.body.innerHTML = "<h1 class='success'>Just kidding! Happy Fools' Day 😆</h1>";
+                }, 3000);
+            }, 2000);
+        }, 3000);
+    </script>
+</head>
+<body>
+    <h1>Loading...</h1>
+</body>
+</html>
